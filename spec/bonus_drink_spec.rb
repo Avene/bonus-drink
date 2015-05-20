@@ -7,6 +7,6 @@ describe BonusDrink do
   specify { expect(BonusDrink.total_count_for(11)).to eq 16 }
   # specify { expect(BonusDrink.total_count_for(100)).to eq XXX }
 
-  specify { expect(BonusDrink.total_count_for(-1)).to raise_error StandardError }
+  specify { expect { BonusDrink.total_count_for(-1) }.to raise_error StandardError }
 
 end
